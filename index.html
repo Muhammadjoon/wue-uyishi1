@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .on {
+            width: 50px;
+            height: 50px;
+            background-color: yellow;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <p>Bu schetchik {{son}}</p>
+        <button v-on:click="count">{{matn}}</button>
+
+        <button @dblclick="show">{{knopka}}</button>
+        <div v-bind:class="svet"></div>
+        <div v-if="agar">Svet yondi</div>
+
+        <input type="text" v-model="text">
+        <h3>{{text.toUpperCase()}}</h3>
+
+        <p>{{word}}</p>
+        <button @click="clickk">{{click}}</button>
+
+        <ul>
+            <li v-for="key in list">
+                <a href="">{{key.link}}</a>
+                <img :src="key.img" alt="">
+            </li>
+        </ul>
+    </div>
+
+    <script src="https://unpkg.com/vue@3"></script>
+    <script src="./script.js"></script>
+</body>
+
+</html>
